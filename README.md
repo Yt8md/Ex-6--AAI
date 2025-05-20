@@ -6,6 +6,7 @@
 <H3>Aim: to perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques. </H3> 
  <BR>
 <h3>Algorithm:</h3>
+
 Step 1: Import the nltk library.<br>
 Step 2: Download the 'punkt', 'wordnet', and 'averaged_perceptron_tagger' resources.<br>
 Step 3:Accept user input for the text.<br>
@@ -16,7 +17,9 @@ Step 5:Iterate through each word in the tokenized text.<br>
 •	For each verb , iterate through its synsets (sets of synonyms) using wordnet.synsets(word).<br>
 •	Extract synonyms and antonyms using lemma.name() and lemma.antonyms()[0].name() respectively.<br>
 •	Print the unique sets of synonyms and antonyms.
+
 <H3>Program:</H3>
+
 ```
 !pip install nltk
 
@@ -31,6 +34,7 @@ sentence=input ()
 
 # Tokenize the sentence into words
 words = word_tokenize(sentence)
+
 # Identify the parts of speech for each word
 pos_tags= nltk.pos_tag(words)
 
@@ -48,10 +52,11 @@ for word in words:
 		for lemma in syn.lemmas():
 			synonyms . append (lemma . name( ) )
 			if lemma . antonyms():
-				antonyms . append ( lemma. antonyms ( ) [0] . name ( ) )
+				antonyms . append ( lemma. antonyms ( ) [0] . name ( ) 
 # Print the synonyms and antonyms
 print ( "Synonyms : " ,set (synonyms) )
 print ( "Antonyms : " ,set(antonyms) )
+
 ```
 
 <H3>Output</H3>
